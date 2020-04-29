@@ -43,3 +43,7 @@ Effect rate: The absorb or repel power of the point can be choosed using this op
 NB: If point type is absorbing, and the power rate is same or bigger than the avoid rate of the objects, the objects may even have ontact with each other.
 
 Effective range: This option shows the effective range of the absorbing or repelling point. This is in same unit with "Object distance" and "Cursor distance" options.
+
+Delete point button: This button will remove the selected absorbing or repelling point from the playground.
+
+NB: If you keep the mouse cursor on a absorbing point or close to it, the point will not be able to absorb the other objects because the keeping the distance from mouse is more important than anything else in the game.
