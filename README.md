@@ -1,7 +1,9 @@
 # Game
-Web application game
+### Web application game
 
-This is a web application game that there are some objects in the playground that are moving around by random, but they have to keep the distance between each other and also from the cursor of the mouse. The application is written with Typescript.
+This is a web application game that there are some objects in the playground that are moving around by random, but they have to keep the distance between each other and also from the cursor of the mouse. The application is written with Typescript and the relative javascript file is provided in the repository.
+
+I invested around 18-22 hours to write the game, improve the code and the user interface, and to test the game. This game was not a very challenging programming task. However, it was necessary to invest enough time to manage the object movements, improve the user interface, and to add some extra features and options to the game.
 
 To run the game, simply download the repository to your machine and open the index.html file using a web browser (Google Chrome, Mozilla Firefox, Microsoft Edge are tested).
 
