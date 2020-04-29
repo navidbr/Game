@@ -230,6 +230,7 @@ function start() {
         objects.push(canvasObject);
     }
     canvasPoints = [];
+    canvasPointsRange = [];
     for (var i_2 = 0; i_2 < points.length; i_2++) {
         var p = points[i_2];
         // adding absorbing/repelling points to canvas
@@ -240,8 +241,11 @@ function start() {
         else {
             canvasPoint = canvas.display.ellipse({ x: p.x, y: p.y, radius: p.radius, fill: "#DC7633" });
         }
+        var canvasPointRange = canvas.display.ellipse({ x: p.x, y: p.y, radius: p.radius + p.effectDistance, stroke: "2px #D5D8DC" });
         canvas.addChild(canvasPoint);
         canvasPoints.push(canvasPoint);
+        canvas.addChild(canvasPointRange);
+        canvasPointsRange.push(canvasPointRange);
     }
     mouseRangeCircle = canvas.display.ellipse({ x: 0, y: 0, radius: legalDistanceOfCursor, stroke: "3px #D5D8DC" });
     canvas.addChild(mouseRangeCircle);
