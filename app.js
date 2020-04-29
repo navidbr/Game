@@ -16,6 +16,7 @@ var objects = []; // Array of moving objects
 var points = []; // Absorbing or repelling points
 var selectedPointIndex = -1;
 var canvasPoints = []; // Absorbing or repelling points in canvas
+var canvasPointsRange = []; // Range of the absorbing or repelling points in canvas
 var mouseRangeCircle;
 var canv; // HTML canvas element
 var gameLoop; // Canvas loop
@@ -154,8 +155,11 @@ function AddOrSelectPoint() {
         else { // adding point
             var p = new absorbingRepellingPoint(canvas.mouse.x, canvas.mouse.y, 15, true, 1, 100);
             var canvasPoint = canvas.display.ellipse({ x: p.x, y: p.y, radius: p.radius, stroke: "7px #99A3A4", fill: "#DC7633" });
+            var canvasPointRange = canvas.display.ellipse({ x: p.x, y: p.y, radius: p.radius + p.effectDistance, stroke: "2px #D5D8DC" });
             canvas.addChild(canvasPoint);
+            canvas.addChild(canvasPointRange);
             canvasPoints.push(canvasPoint);
+            canvasPointsRange.push(canvasPointRange);
             points.push(p);
             if (selectedPointIndex >= 0) {
                 canvasPoints[selectedPointIndex].stroke = "";
@@ -239,7 +243,7 @@ function start() {
         canvas.addChild(canvasPoint);
         canvasPoints.push(canvasPoint);
     }
-    mouseRangeCircle = canvas.display.ellipse({ x: 0, y: 0, radius: legalDistanceOfCursor, stroke: "5px #D5D8DC" });
+    mouseRangeCircle = canvas.display.ellipse({ x: 0, y: 0, radius: legalDistanceOfCursor, stroke: "3px #D5D8DC" });
     canvas.addChild(mouseRangeCircle);
     // Generating random movements for objects
     for (var i_3 = 0; i_3 < objectNumber; i_3++) {
@@ -490,6 +494,8 @@ function deletePoint() {
     var index = Number(deleteBtn.getAttribute("pointIndex"));
     canvasPoints[index].remove();
     canvasPoints.splice(index, 1);
+    canvasPointsRange[index].remove();
+    canvasPointsRange.splice(index, 1);
     points.splice(index, 1);
     selectedPointIndex = -1;
     pointSettingsElement.style.visibility = "hidden";
@@ -524,5 +530,6 @@ function pointEffectDistanceChange() {
     var effectDistance = Number(pointEffectDistanceInput.options[pointEffectDistanceInput.selectedIndex].value);
     var index = Number(deleteBtn.getAttribute("pointIndex"));
     points[index].effectDistance = effectDistance;
+    canvasPointsRange[index].radius = points[index].radius + effectDistance;
 }
 pointEffectDistanceInput.addEventListener("change", pointEffectDistanceChange);
