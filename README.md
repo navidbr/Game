@@ -8,7 +8,7 @@ I invested around 18-22 hours to write the game, improve the code and the user i
 To run the game, simply download the repository to your machine and open the index.html file using a web browser (Google Chrome, Mozilla Firefox, Microsoft Edge are tested).
 
 
-# Game settings:
+## Game settings:
 
 "Number of objects": The number of objects can be entered here. It is 10 by default.
 "Field width", "Field height": The width and height of the playground can be set using these inputs. Default values are Field width: 2000, and Field height: 800. 
