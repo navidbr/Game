@@ -31,7 +31,7 @@ Object size: The size of the objects can be selected using this option. The valu
 
 In addition to the above-mentioned rules, you can add some fixed points in the playground that can be set to absorb the other objects or repel them. To do so, please click on the playground. This will add a point to the playground. By adding a point, some other settings will appear.
 
-To select a previously added point, simply click on the point. Then the settings of the selected point will be displayed in the control panel.
+To select a previously added point, simply click on the point. Then the settings of the selected point will be displayed in the control panel. (Selected point will be shown with a thin grey color border)
 
 point settings:
 Point size: The size of the point can be chosen using this option.
