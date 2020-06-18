@@ -49,3 +49,7 @@ Effect range: This option shows the effective range of the absorbing or repellin
 Delete point button: This button will remove the selected absorbing or repelling point from the playground.
 
 #### NB:  If you keep the mouse cursor on an absorbing point or close to it, the point will not be able to absorb the other objects because keeping the distance from the mouse is more important than anything else in the game.
+
+<br><br>
+
+<img src="screencapture.jpg">
